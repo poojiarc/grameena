@@ -57,8 +57,6 @@ const Footer = () => {
 
           {/* Services & Hours */}
           <div>
-            <h4 className="font-display text-base font-semibold text-gold-light mb-4">Services</h4>
-            <p className="text-sm text-cream/70 mb-4">Manufacturing & retailing cold-pressed oils and natural health products.</p>
             <h4 className="font-display text-base font-semibold text-gold-light mb-2 flex items-center gap-2"><Clock size={14} /> Business Hours</h4>
             <div className="text-sm text-cream/70 space-y-1">
               <p>Mon – Sat: 9:30 AM – 9:30 PM</p>
