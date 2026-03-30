@@ -71,10 +71,25 @@ const Footer = () => {
       {/* Bottom */}
       <div className="border-t border-cream/10">
         <div className="container mx-auto px-4 py-4 text-center">
-          <p className="text-sm text-cream/60">
-            Made with <Heart size={14} className="inline text-destructive fill-destructive" /> by{' '}
-            <a href="https://staffarc.com" target="_blank" rel="noopener noreferrer" className="text-gold-light hover:underline font-medium">StaffArc</a>
-          </p>
+          <div className="flex justify-center items-center gap-1 text-sm text-cream/60">
+  Made with 
+  <Heart size={14} className="text-destructive fill-destructive" />
+  by
+  <a
+    href="https://staffarc.in"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-1 text-gold-light hover:underline font-medium"
+  >
+    <img
+      src="https://www.staffarc.in/images/Staffarc-logo.png"
+      alt="StaffArc logo"
+      className="h-4 w-4 object-contain"
+    />
+    StaffArc
+  </a>
+</div>
+
           <p className="text-xs text-cream/40 mt-1">© {new Date().getFullYear()} Grameena Arogya. All rights reserved.</p>
         </div>
       </div>
