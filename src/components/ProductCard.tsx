@@ -35,7 +35,7 @@ const ProductCard = ({ product }: { product: Product }) => {
       </div>
 
       <div className="p-5">
-        <h3 className="font-display text-lg font-semibold text-foreground leading-tight">{product.name}</h3>
+        <h3 className="font-sans text-lg font-semibold text-foreground">{product.name}</h3>
         <p className="text-sm text-accent font-medium mt-0.5 mb-4">{product.teluguName}</p>
 
         {/* Quantity toggles */}
@@ -63,7 +63,7 @@ const ProductCard = ({ product }: { product: Product }) => {
 
         <div className="flex items-center justify-between pt-2 border-t border-border/50">
           <div className="flex items-baseline gap-2">
-            <span className="font-display text-xl font-bold text-primary">₹{selected.price}</span>
+            <span className="font-sans text-xl font-bold text-primary">₹{selected.price}</span>
             {hasDiscount && (
               <span className="text-sm text-muted-foreground line-through">₹{selected.mrp}</span>
             )}

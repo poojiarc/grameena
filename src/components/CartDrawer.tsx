@@ -35,7 +35,7 @@ const CartDrawer = () => {
         <div className="flex items-center justify-between p-4 border-b border-border">
           <div className="flex items-center gap-2">
             <ShoppingBag size={20} className="text-primary" />
-            <h2 className="font-display text-lg font-bold">Your Cart ({totalItems})</h2>
+            <h2 className="font-sans text-lg font-bold">Your Cart ({totalItems})</h2>
           </div>
           <button onClick={() => setIsOpen(false)} className="p-2 rounded-lg hover:bg-muted transition-colors">
             <X size={20} />
@@ -69,7 +69,7 @@ const CartDrawer = () => {
                       <span className="w-5 text-center text-sm font-bold">{item.quantity}</span>
                       <button onClick={() => updateQuantity(item.product.id, item.selectedQuantity, 1)} className="p-1 rounded bg-primary text-primary-foreground"><Plus size={12} /></button>
                     </div>
-                    <span className="font-display font-bold text-primary">₹{item.price * item.quantity}</span>
+                    <span className="font-sans font-bold text-primary">₹{item.price * item.quantity}</span>
                   </div>
                 </div>
               ))}
@@ -79,7 +79,7 @@ const CartDrawer = () => {
           {/* Customer Form */}
           {items.length > 0 && (
             <div className="mt-6 space-y-3">
-              <h3 className="font-display text-sm font-semibold text-foreground">Delivery Details</h3>
+              <h3 className="font-sans  text-sm font-semibold text-foreground">Delivery Details</h3>
               <input
                 value={name}
                 onChange={e => setName(e.target.value)}
@@ -108,7 +108,7 @@ const CartDrawer = () => {
           <div className="p-4 border-t border-border bg-card">
             <div className="flex justify-between items-center mb-3">
               <span className="font-medium text-muted-foreground">Total Amount</span>
-              <span className="font-display text-2xl font-bold text-primary">₹{totalPrice}</span>
+              <span className="font-sans  text-2xl font-bold text-primary">₹{totalPrice}</span>
             </div>
             <button
               onClick={handleCheckout}
