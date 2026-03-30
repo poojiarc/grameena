@@ -1,7 +1,12 @@
 import HeroSection from '@/components/HeroSection';
 import RevealSection from '@/components/RevealSection';
+import ProductCard from '@/components/ProductCard';
 import { Link } from 'react-router-dom';
 import { Leaf, Droplets, Heart, Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
+import { products } from '@/data/products';
+import aboutImg from '@/assets/about-story.jpg';
+
+const featuredProducts = products.slice(0, 4);
 
 const Index = () => {
   return (
@@ -12,32 +17,82 @@ const Index = () => {
       <section className="section-padding bg-background">
         <div className="container mx-auto">
           <RevealSection>
-            <div className="text-center max-w-3xl mx-auto">
-              <p className="text-accent text-sm font-semibold tracking-widest uppercase mb-2">About Us</p>
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Rooted in <span className="text-primary">Tradition</span>, Crafted with <span className="text-accent">Care</span>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <div className="relative">
+                <img
+                  src={aboutImg}
+                  alt="Traditional Ganuga oil making process"
+                  loading="lazy"
+                  width={800}
+                  height={512}
+                  className="w-full rounded-2xl shadow-2xl object-cover aspect-[4/3]"
+                />
+                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/10 rounded-2xl -z-10 hidden lg:block" />
+                <div className="absolute -top-4 -left-4 w-16 h-16 bg-accent/10 rounded-xl -z-10 hidden lg:block" />
+              </div>
+              <div>
+                <p className="text-accent text-sm font-semibold tracking-widest uppercase mb-3">About Us</p>
+                <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
+                  Rooted in <span className="text-primary">Tradition</span>, Crafted with <span className="text-accent">Care</span>
+                </h2>
+                <p className="text-muted-foreground leading-relaxed mb-8 text-base lg:text-lg">
+                  At Grameena Arogya, we are committed to bringing back the purity of traditional Indian oil making through our authentic Ganuga (wood-pressed) extraction methods. Our oils are carefully produced using natural processes that preserve essential nutrients, aroma, and taste.
+                </p>
+                <Link
+                  to="/about"
+                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-xl font-semibold hover:bg-primary/90 transition-all duration-200 active:scale-95 shadow-md"
+                >
+                  Learn More About Us <ArrowRight size={16} />
+                </Link>
+              </div>
+            </div>
+          </RevealSection>
+        </div>
+      </section>
+
+      {/* Featured Products */}
+      <section className="section-padding bg-card">
+        <div className="container mx-auto">
+          <RevealSection>
+            <div className="text-center mb-12">
+              <p className="text-accent text-sm font-semibold tracking-widest uppercase mb-3">Our Products</p>
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+                Handpicked <span className="text-primary">Essentials</span>
               </h2>
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                At Grameena Arogya, we are committed to bringing back the purity of traditional Indian oil making through our authentic Ganuga (wood-pressed) extraction methods. Our oils are carefully produced using natural processes that preserve essential nutrients, aroma, and taste.
+              <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
+                From cold-pressed oils to pure ghee and natural flours — explore our curated collection.
               </p>
+            </div>
+          </RevealSection>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredProducts.map(product => (
+              <RevealSection key={product.id}>
+                <ProductCard product={product} />
+              </RevealSection>
+            ))}
+          </div>
+
+          <RevealSection>
+            <div className="text-center mt-12">
               <Link
-                to="/about"
-                className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all duration-200"
+                to="/products"
+                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3.5 rounded-xl font-semibold hover:bg-primary/90 transition-all duration-200 active:scale-95 shadow-lg hover:shadow-xl text-base"
               >
-                Learn More <ArrowRight size={16} />
+                View All Products <ArrowRight size={18} />
               </Link>
             </div>
           </RevealSection>
         </div>
       </section>
 
-      {/* Features */}
-      <section className="section-padding bg-card">
+      {/* Why Choose Us */}
+      <section className="section-padding bg-background">
         <div className="container mx-auto">
           <RevealSection>
-            <div className="text-center mb-12">
-              <p className="text-accent text-sm font-semibold tracking-widest uppercase mb-2">Why Choose Us</p>
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
+            <div className="text-center mb-14">
+              <p className="text-accent text-sm font-semibold tracking-widest uppercase mb-3">Why Choose Us</p>
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
                 Pure by <span className="text-primary">Nature</span>
               </h2>
             </div>
@@ -50,11 +105,11 @@ const Index = () => {
               { icon: Heart, title: 'Health First', desc: 'Rich in essential fatty acids, vitamins, and antioxidants for your wellbeing.' },
             ].map(({ icon: Icon, title, desc }, i) => (
               <RevealSection key={i}>
-                <div className="text-center p-8 rounded-xl bg-background border border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Icon size={28} className="text-primary" />
+                <div className="text-center p-10 rounded-2xl bg-card border border-border hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
+                  <div className="w-18 h-18 mx-auto mb-5 rounded-2xl bg-primary/10 flex items-center justify-center w-[72px] h-[72px]">
+                    <Icon size={32} className="text-primary" />
                   </div>
-                  <h3 className="font-display text-xl font-semibold mb-2 text-foreground">{title}</h3>
+                  <h3 className="font-display text-xl font-semibold mb-3 text-foreground">{title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{desc}</p>
                 </div>
               </RevealSection>
@@ -63,32 +118,13 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Services */}
-      <section className="section-padding bg-gradient-earth text-cream">
-        <div className="container mx-auto text-center">
-          <RevealSection>
-            <p className="text-gold-light text-sm font-semibold tracking-widest uppercase mb-2">Our Services</p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">What We Offer</h2>
-            <p className="text-cream/80 max-w-2xl mx-auto text-lg leading-relaxed mb-8">
-              Manufacturing & retailing cold-pressed oils and natural health products — from pure Ganuga oils to organic flours, ghee, and spices.
-            </p>
-            <Link
-              to="/products"
-              className="inline-flex items-center gap-2 bg-gold text-earth px-8 py-3 rounded-lg font-semibold hover:bg-gold-light transition-all duration-200 active:scale-95"
-            >
-              Browse Products <ArrowRight size={16} />
-            </Link>
-          </RevealSection>
-        </div>
-      </section>
-
       {/* Contact Info */}
-      <section className="section-padding bg-background">
+      <section className="section-padding bg-gradient-earth text-cream">
         <div className="container mx-auto">
           <RevealSection>
-            <div className="text-center mb-10">
-              <p className="text-accent text-sm font-semibold tracking-widest uppercase mb-2">Get In Touch</p>
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">Contact Us</h2>
+            <div className="text-center mb-12">
+              <p className="text-gold-light text-sm font-semibold tracking-widest uppercase mb-3">Get In Touch</p>
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold">Contact Us</h2>
             </div>
           </RevealSection>
 
@@ -99,15 +135,15 @@ const Index = () => {
               { icon: MapPin, label: 'Address', value: 'Shivam Rd, Amberpet, Hyderabad', href: undefined },
             ].map(({ icon: Icon, label, value, href }, i) => (
               <RevealSection key={i}>
-                <div className="text-center p-6 rounded-xl bg-card border border-border hover:shadow-md transition-all duration-300">
-                  <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Icon size={20} className="text-primary" />
+                <div className="text-center p-8 rounded-2xl bg-cream/5 border border-cream/10 hover:bg-cream/10 transition-all duration-300 backdrop-blur-sm">
+                  <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gold/20 flex items-center justify-center">
+                    <Icon size={24} className="text-gold-light" />
                   </div>
-                  <p className="text-sm text-muted-foreground mb-1">{label}</p>
+                  <p className="text-sm text-cream/60 mb-1">{label}</p>
                   {href ? (
-                    <a href={href} className="text-foreground font-medium hover:text-primary transition-colors text-sm">{value}</a>
+                    <a href={href} className="text-cream font-medium hover:text-gold-light transition-colors">{value}</a>
                   ) : (
-                    <p className="text-foreground font-medium text-sm">{value}</p>
+                    <p className="text-cream font-medium text-sm">{value}</p>
                   )}
                 </div>
               </RevealSection>
