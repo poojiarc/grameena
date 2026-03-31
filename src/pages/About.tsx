@@ -42,15 +42,24 @@ const About = () => {
                 <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/10 rounded-2xl -z-10 hidden lg:block" />
                 <div className="absolute -top-4 -left-4 w-16 h-16 bg-accent/10 rounded-xl -z-10 hidden lg:block" />
               </div>
-              <div className="order-1 lg:order-2">
+              <div className="space-y-4">
                 <p className="text-accent text-sm font-semibold tracking-widest uppercase mb-3">Our Heritage</p>
-                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">A Legacy of <span className="text-primary">Purity</span></h2>
+                <h2 className="font-sans text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">
+  Rooted in Tradition, <span className="text-primary">Driven by Purity</span>
+</h2>
                 <p className="text-muted-foreground leading-relaxed text-base lg:text-lg mb-4">
-                  At Grameena Arogya, we are committed to bringing back the purity of traditional Indian oil making through our authentic Ganuga (wood-pressed) extraction methods. Our oils are carefully produced using natural processes that preserve essential nutrients, aroma, and taste without the use of chemicals or modern refining techniques.
-                </p>
-                <p className="text-muted-foreground leading-relaxed text-base lg:text-lg">
-                  Sourced from high-quality seeds and crafted in small batches, our products reflect our dedication to health, sustainability, and rural empowerment. We believe that true wellness begins with what we consume, and through our range of pure, natural oils, we aim to promote a healthier lifestyle rooted in tradition and trust.
-                </p>
+                  <p className="text-accent text-sm font-semibold tracking-widest uppercase mb-3">Our Story Since 2019</p>
+  At Grameena Arogya, established in 2019, we are dedicated to reviving the purity of traditional Indian oil-making through authentic Ganuga (wood-pressed) extraction methods. Our oils are carefully produced using natural processes that preserve essential nutrients, rich aroma, and original taste—without the use of chemicals or modern refining techniques.
+</p>
+
+<p className="text-muted-foreground leading-relaxed text-base lg:text-lg mb-4">
+  Every product is sourced from high-quality seeds and crafted in small batches to ensure freshness, purity, and superior quality. We follow time-honored methods that respect nature while delivering the goodness of truly natural oils.
+</p>
+
+<p className="text-muted-foreground leading-relaxed text-base lg:text-lg">
+  Our mission goes beyond just products—we aim to promote healthy living, sustainability, and rural empowerment. By supporting local farmers and preserving traditional practices, we bring you oils that are rooted in trust, tradition, and wellness.
+</p>
+
               </div>
             </div>
           </RevealSection>
