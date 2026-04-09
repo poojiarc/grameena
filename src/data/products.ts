@@ -64,7 +64,7 @@ export const products: Product[] = [
   { id: 'rock-salt', name: 'Rock Salt', teluguName: 'రాతి ఉప్పు', category: 'others', image: rockSalt, prices: [{ quantity: '1kg', price: 65 }] },
   { id: 'sea-salt', name: 'Sea Salt', teluguName: 'సముద్ర ఉప్పు', category: 'others', image: seaSalt, prices: [{ quantity: '1kg', price: 50 }] },
   { id: 'pure-honey', name: 'Pure Honey', teluguName: 'స్వచ్ఛమైన తేనె', category: 'others', image: pureHoney, prices: [{ quantity: '500g', price: 250 }, { quantity: '250g', price: 130 }] },
-  {id: "Sunflower Oil", name: "Sunflower Oil", teluguName: "సూర్యకాంతి నూనె", category: "oils", image: sunflowerOil, prices: [{ quantity: '1L', price: 480, mrp: 500 }, { quantity: '500ml', price: 230 }, { quantity: '250ml', price: 120 }] },
+  {id: "Sunflower Oil", name: "Sunflower Oil", teluguName: "సూర్యకాంతి నూనె", category: "oils", image: sunflowerOil, prices: [{ quantity: '1000ml', price: 480, mrp: 500 }, { quantity: '500ml', price: 250 }] },
 ];
 
 export const categories = [
