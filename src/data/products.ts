@@ -18,13 +18,13 @@ export interface Product {
 import groundnutOil from '@/assets/products/groundnut-oil.jpg';
 import whiteSesameOil from '@/assets/products/white-sesame-oil.jpg';
 import coconutOil from '@/assets/products/coconut-oil.jpg';
-import safflowerOil from '@/assets/products/safflower-oil.jpg';
+import safflowerOil from '@/assets/products/safflower-oil.jpeg';
 import blackSesameOil from '@/assets/products/black-sesame-oil.jpg';
 import mustardOil from '@/assets/products/mustard-oil.jpg';
 import castorOil from '@/assets/products/castor-oil.jpg';
-import neemOil from '@/assets/products/neem-oil.jpg';
-import buffaloGhee from '@/assets/products/buffalo-ghee.jpg';
-import cowGhee from '@/assets/products/cow-ghee.jpg';
+import neemOil from '@/assets/products/neem-oil.jpeg';
+import buffaloGhee from '@/assets/products/buffalo-ghee.jpeg';
+import cowGhee from '@/assets/products/cow-ghee.jpeg';
 import ragiFlour from '@/assets/products/ragi-flour.jpg';
 import whiteJowar from '@/assets/products/white-jowar.jpg';
 import yellowJowar from '@/assets/products/yellow-jowar.jpg';
@@ -36,6 +36,7 @@ import turmericPowder from '@/assets/products/turmeric-powder.jpg';
 import rockSalt from '@/assets/products/rock-salt.jpg';
 import seaSalt from '@/assets/products/sea-salt.jpg';
 import pureHoney from '@/assets/products/pure-honey.jpg';
+import sunflowerOil from '@/assets/products/sunflower-oil.jpeg';
 
 export const products: Product[] = [
   // OILS
@@ -63,6 +64,7 @@ export const products: Product[] = [
   { id: 'rock-salt', name: 'Rock Salt', teluguName: 'రాతి ఉప్పు', category: 'others', image: rockSalt, prices: [{ quantity: '1kg', price: 65 }] },
   { id: 'sea-salt', name: 'Sea Salt', teluguName: 'సముద్ర ఉప్పు', category: 'others', image: seaSalt, prices: [{ quantity: '1kg', price: 50 }] },
   { id: 'pure-honey', name: 'Pure Honey', teluguName: 'స్వచ్ఛమైన తేనె', category: 'others', image: pureHoney, prices: [{ quantity: '500g', price: 250 }, { quantity: '250g', price: 130 }] },
+  {id: "Sunflower Oil", name: "Sunflower Oil", teluguName: "సూర్యకాంతి నూనె", category: "oils", image: sunflowerOil, prices: [{ quantity: '1L', price: 480, mrp: 500 }, { quantity: '500ml', price: 230 }, { quantity: '250ml', price: 120 }] },
 ];
 
 export const categories = [

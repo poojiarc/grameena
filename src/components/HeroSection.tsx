@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import hero1 from '@/assets/hero1.jpg';
-import hero2 from '@/assets/hero2.jpg';
+import hero2 from '@/assets/hero2.jpeg';
 import hero3 from '@/assets/hero3.jpg';
 import { Link } from 'react-router-dom';
 
