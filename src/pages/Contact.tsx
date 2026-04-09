@@ -85,7 +85,10 @@ const Contact = () => {
                   </a>
                   <div className="flex items-start gap-3 text-muted-foreground">
                     <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5"><MapPin size={16} className="text-primary" /></div>
-                    <span className="text-sm">Shivam Rd, beside Karur Vysya Bank, Vidya Nagar, APHB Colony, Amberpet, Hyderabad, Telangana 500044</span>
+                    <span className="text-sm">
+  Grameena Arogya, Amberpet, Hyderabad, Telangana
+</span>
+
                   </div>
                   <div className="flex items-start gap-3 text-muted-foreground">
                     <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0"><Clock size={16} className="text-primary" /></div>
@@ -99,15 +102,15 @@ const Contact = () => {
                 {/* Google Maps */}
                 <div className="rounded-xl overflow-hidden border border-border h-64 lg:h-80">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.114!2d78.5102!3d17.3920!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99c6a35f3e53%3A0xgrameenaarogya!2sShivam%20Rd%2C%20Amberpet%2C%20Hyderabad%2C%20Telangana%20500044!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Grameena Arogya Location"
-                  />
+  src="https://www.google.com/maps?q=Grameena+Arogya+Amberpet+Hyderabad&output=embed"
+  width="100%"
+  height="100%"
+  style={{ border: 0 }}
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+  title="Grameena Arogya Location"
+/>
                 </div>
               </div>
             </RevealSection>
